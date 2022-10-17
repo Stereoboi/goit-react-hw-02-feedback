@@ -1,5 +1,5 @@
 import { Button, Container, } from './FeedbackRank.styled'
-
+import PropTypes from 'prop-types';
 export const FeedbackOptions = ({options , onLeaveFeedback}) => {
   return (
     <Container>
@@ -14,4 +14,9 @@ export const FeedbackOptions = ({options , onLeaveFeedback}) => {
       ))}    
     </Container>
   )
+}
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 }

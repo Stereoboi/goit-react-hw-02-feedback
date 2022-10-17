@@ -1,4 +1,5 @@
 import { SectionWrapper } from "./Section.styled"
+import PropTypes from 'prop-types';
 
 export const Section = ({ title, children }) => {
   return (
@@ -8,3 +9,8 @@ export const Section = ({ title, children }) => {
     </SectionWrapper>
   )
 } 
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  
+}
